@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grunge</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script src="https://kit.fontawesome.com/08cddc33a5.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="logo-content text-center p-5">
+			<h1>GRUNGE</h1>
+		</div>
+		<nav>
+			<div>
+				<div class="text-center nav-left">
+					<ul class="hor-list text-center ml-5" id="nav">
+						<li>
+							<a href="#">ФУТБОЛКИ</a>
+						</li>
+						<li>
+							<a href="#">СВИТШОТЫ</a>
+						</li>
+						<li>
+							<a href="#">ХУДИ</a>
+						</li>
+						<li>
+							<a href="#">РУБАШКИ</a>
+						</li>
+						<li>
+							<a href="#">ШАПКИ</a>
+						</li>
+						<li>
+							<a href="#">ПОЛО</a>
+						</li>
+						<li>
+							<a href="#">РЮКЗАКИ</a>
+						</li>
+						<li>
+							<a href="#">СУВЕНИРЫ</a>
+						</li>
+						<li>
+							<a href="#">MEMES</a>
+						</li>
+						<li>
+							<a href="#">FAQ</a>
+						</li>
+						<li>
+							<a href="#">СТАТУС ЗАКАЗА</a>
+						</li>
+					</ul>
+				</div>
+				<div class="text-center nav-right">
+					<ul class="hor-list">
+						<li>
+							<a href="#
+							">
+								<i class="far fa-user"></i>
+							</a>	
+						</li>
+						<li>
+							<a href="#" data-toggle="modal" data-target="#cart-modal">
+								<i class="fas fa-shopping-cart"></i>
+							</a>
+						</li>
+						<li>
+							0 RUB
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section>
+		<div id="main-section" class="text-center">
+				ЕСТЬ ТОЛЬКО
+			<span class="main-section-white">
+				<b style="margin:15px;">БЕЛЫЙ</b>
+			</span>
+				И ЧЕРНЫЙ. ОСТАЛЬНОЕ - ОТТЕНКИ.
+		</div>
+	</section>
+	<footer>
+	  <div class="row">
+		<div class="col">
+			<p style="font-size:32px;">GRUNGE</p>
+			<picture> 
+				<a href="#">
+					<i class="fab fa-instagram" ></i>
+				</a>
+				<a href="#">
+					<i class="fab fa-facebook-square"></i>
+				</a>	
+			</picture>
+			<br>
+			<small>&copy 2020, B.Bondarenko</small>
+		</div>
+		<div class="col">
+			<address class="footer-info">
+				<p>
+					E-MAIL:
+				</p>			
+				<p>
+					body18122002@gmail.com
+				</p>
+			</address>
+			<div class="footer-info">
+				<p>
+					ВРЕМЯ РАБОТЫ СЛУЖБЫ ПОДДЕРЖКИ :
+				</p>
+				<p>
+					ПН-ПТ: 9:00 - 21:00
+				</p>
+				
+			</div>
+		</div>
+		<div class="footer-info col">
+			<p>
+				ПРИНИМАЕМ К ОПЛАТЕ:
+			</p>
+			<picture>
+				<i class="fab fa-cc-visa"></i>
+				<i class="fab fa-cc-paypal"></i><i class="fab fa-cc-mastercard"></i>
+				<i class="fab fa-cc-amex"></i>
+			</picture>
+		</div>
+	  </div>
+	</footer>
+	<div class="modal fade" id="cart-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+    		 	<div class="modal-header">
+      			 	 <h3 class="modal-title" id="exampleModalLabel">мои покупки</h3>
+      			 	 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      		     	 	<span aria-hidden="true">&times;</span>
+       			  	 </button>
+    		  	</div>
+     			<div class="modal-body">
+       			 ...
+      			</div>
+      			<div class="modal-footer">
+      				<div style="width:100%">Общая стоимость <b>0 RUB</b></div>
+       				 <button type="button" class="btn btn-secondary" data-dismiss="modal">продолжить покупки</button>
+       				 <button type="button" class="btn btn-primary">оформить заказ</button>
+      			</div>
+    		</div>
+ 		</div>
+	</div>
+<script src="code.js"></script>
+</body>
+</html>
