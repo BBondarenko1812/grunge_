@@ -14,6 +14,7 @@
 	margin-rigth: 5px;
 	padding: 3px;
 }
+
 body
 {
 	color:white;
@@ -34,6 +35,15 @@ footer
 h1
 {
 	font-size:50px;
+}
+h1 > a
+{
+	color:white;
+}
+h1 > a:hover
+{
+	color:white;
+	text-decoration:none;
 }
 .logo-content
 {
@@ -144,10 +154,6 @@ small
 	background-color:black;
 	color:white;
 }
-#section
-{
-	width:100%;
-}
 .item-block
 {
 	flex-basis: 25%;
@@ -156,6 +162,10 @@ small
 	margin-left: 25px;
 	border:2px solid black;
 	border-radius: 10%;
+}
+.item-block:hover
+{
+	background-color: grey;
 }
 .p-img
 {
@@ -167,6 +177,26 @@ small
 {
 	padding:5px;
 }
-.p-price
+.row
 {
+	margin-right:0;
+}
+.clothpage-img
+{
+	width: inherit;
+	padding:10%;
+}
+.clothpage-h-block
+{
+	width: 100%;
+}
+.clothpage-h
+{
+	padding: 20px;
+	text-align: center;	
+}
+.clothpage-price
+{
+	text-align: center;
+	padding:20px;
 }
