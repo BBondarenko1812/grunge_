@@ -53,7 +53,16 @@ h1
 	text-decoration: none;
 	color:grey;
 }
+.logo-content > h1 > a:hover 
+{
+	text-decoration:none;
+	color:grey;
+}
 .hor-list > li > a
+{
+	color:white;
+}
+.logo-content > h1 > a
 {
 	color:white;
 }
@@ -143,4 +152,15 @@ small
 {
 	background-color:black;
 	color:white;
+}
+.cart-block
+{
+	width:100%;
+	margin:5px;
+	padding:10px;
+}
+.cart-block:hover
+{
+	background-color: grey;
+	
 }

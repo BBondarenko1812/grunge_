@@ -200,3 +200,14 @@ small
 	text-align: center;
 	padding:20px;
 }
+.cart-block
+{
+	width:100%;
+	margin:5px;
+	padding:10px;
+}
+.cart-block:hover
+{
+	background-color: grey;
+	
+}

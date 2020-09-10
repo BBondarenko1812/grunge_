@@ -1,5 +1,11 @@
-var section = document.getElementById("section"),
-item = null, part = null, piece = null;
+var item = null, part = null, piece = null;
+var product_number = 1;
+var cart = document.querySelector('.modal-body');
+
+if (document.getElementById("section") != undefined)
+{
+    var section = document.getElementById("section");
+}
 
 function goToPage(start_cloth,end_cloth) 
 {
@@ -9,11 +15,23 @@ function goToPage(start_cloth,end_cloth)
 	window.location.assign("index_clothpage.html");
 }
 
-function pageLoaded()
+window.onload = function pageLoaded()
 {
     creatingContentList(localStorage.getItem('start_cloth'),localStorage.getItem('end_cloth'));
+    cartCheck();
 }
 
+function cartCheck()
+{
+    for(var i = 0; i < localStorage.length; i++)
+    { 
+        if(localStorage.key(i)[0] == 'c')
+        {
+            var key = +localStorage.key(i)[4];
+            buyButton(key);
+        }
+    }
+}
 function onClick_button(start_cloth,end_cloth)
 {
 	section.innerHTML = "";
@@ -22,7 +40,9 @@ function onClick_button(start_cloth,end_cloth)
 
 function creatingContentList(start_cloth,end_cloth)
 {	
-	for(var i = start_cloth; i < end_cloth; i ++)
+    let start = +start_cloth;
+    let end = +end_cloth;
+	for(var i = start; i < end; i ++)
 	{
       
    	 	item = document.createElement("div");
@@ -46,13 +66,19 @@ function creatingContentList(start_cloth,end_cloth)
     	part.innerHTML = t_shirt[i].price;
     	item.appendChild(part);
 
-    	section.appendChild(item);
+    	if(section == undefined)
+        {
+            return false;
+        }
+        else
+        {
+            section.appendChild(item);
+        }
     }
 }
 
 function creatingContentPage(position_item)
 {
-    console.log(position_item);
     section.innerHTML = "";
 
     item = document.createElement("div");
@@ -88,9 +114,36 @@ function creatingContentPage(position_item)
     piece.classList.add("clothpage-price");
 
     part.appendChild(piece);
+
+    piece = document.createElement("button");
+    piece.classList.add("btn");
+    piece.classList.add("btn-dark");
+    piece.innerHTML = "BUY";
+    $(piece).attr("onClick", `buyButton(`+position_item+`)`);
+
+
+    part.appendChild(piece);
     item.appendChild(part);
     section.appendChild(item);
+    
 }
 
+function buyButton(position_item)
+{
+  
+    part = document.createElement("div");
+    part.classList.add('col-xxl');
+    part.classList.add('cart-block');
 
-	
+    piece = document.createElement("i");
+    piece.innerHTML = product_number;
+    part.appendChild(piece);
+    
+    piece = document.createElement("h3");
+    piece.innerHTML = t_shirt[position_item].name;
+    
+    part.appendChild(piece);
+    localStorage.setItem(`cart`+[position_item],JSON.stringify(t_shirt[position_item]));
+    product_number++;
+    cart.children[0].appendChild(part);
+}
